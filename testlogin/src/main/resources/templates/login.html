@@ -24,6 +24,11 @@
                     <label for="Password">Password:</label>
                     <input type="password" class="form-control" id="Password" name="password" placeholder="Enter password">
                 </div>
+                <div class="form-group">
+                    <label for="imageCode">imageCode:</label>
+                    <input type="text" class="form-control" id="imageCode" name="imageCode" placeholder="Enter imageCode">
+                    <img src="/code/image">
+                </div>
                 <div class="form-group" th:if="${param.error}">
                     <p th:if="${session.SPRING_SECURITY_LAST_EXCEPTION}"></p>
                     <p th:text="${session.SPRING_SECURITY_LAST_EXCEPTION.message}"></p>
