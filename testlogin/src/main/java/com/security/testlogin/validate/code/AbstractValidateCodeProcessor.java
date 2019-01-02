@@ -8,8 +8,6 @@ import org.thymeleaf.util.StringUtils;
 
 import java.util.Map;
 
-import static com.security.testlogin.validate.code.impl.ValidateCodeProcessor.SESSION_KEY_PREFIX;
-
 public abstract class AbstractValidateCodeProcessor<C> implements ValidateCodeProcessor {
 
     private static final String SEPARATOR = "/code/";

@@ -34,7 +34,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.addFilterBefore(imageCodeFilter, UsernamePasswordAuthenticationFilter.class)
                 .authorizeRequests()
-                .antMatchers("/authentication/*", "/login/*", "/user/index")
+                // 注意要将 /code/*放开去页面上的校验码图片
+                .antMatchers("/authentication/*", "/login/*", "/user/index", "/code/*")
                 .permitAll()
                 .antMatchers("/user/**").hasAnyRole("USER")
                 .antMatchers("/admin/**").hasAnyRole("ADMIN")

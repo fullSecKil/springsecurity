@@ -16,6 +16,9 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+// debug
+apply plugin: 'application'
+applicationDefaultJvmArgs = [ "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005" ]
 
 group = 'com.security'
 version = '0.0.1-SNAPSHOT'

@@ -30,8 +30,9 @@
                     <img src="/code/image">
                 </div>
                 <div class="form-group" th:if="${param.error}">
-                    <p th:if="${session.SPRING_SECURITY_LAST_EXCEPTION}"></p>
+                    <p th:if="${session.SPRING_SECURITY_LAST_EXCEPTION}">
                     <p th:text="${session.SPRING_SECURITY_LAST_EXCEPTION.message}"></p>
+                    </p>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
