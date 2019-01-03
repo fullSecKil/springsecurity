@@ -1,9 +1,7 @@
-package com.security.testlogin.controller;
+package com.example.smscodesecurity.controller;
 
-import com.google.code.kaptcha.impl.DefaultKaptcha;
-import com.security.testlogin.validate.code.impl.ValidateCodeProcessor;
+import com.example.smscodesecurity.validate.code.ValidateCodeProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.ServletWebRequest;
@@ -13,15 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
 @RestController
-public class ImageCodeController {
-
-    @Autowired
-    private DefaultKaptcha defaultKaptcha;
+public class CodeProcessorController {
 
     @Autowired
     private Map<String, ValidateCodeProcessor> validateCodeProcessorMap;
 
-    @GetMapping("/code/{type}")
     public void getCode(HttpServletRequest request, HttpServletResponse response, @PathVariable String type) throws Exception {
         validateCodeProcessorMap.get(type + ValidateCodeProcessor.CODE_PROCESSOR).create(new ServletWebRequest(request, response));
     }
