@@ -1,7 +1,7 @@
-package com.security.testlogin.validate.code;
+package com.example.smscodesecurity.validate.code.impl;
 
-import com.security.testlogin.validate.code.impl.ValidateCodeGenerator;
-import com.security.testlogin.validate.code.impl.ValidateCodeProcessor;
+import com.example.smscodesecurity.validate.code.ValidateCodeGenerator;
+import com.example.smscodesecurity.validate.code.ValidateCodeProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.request.ServletWebRequest;
 import org.thymeleaf.util.StringUtils;
@@ -17,7 +17,6 @@ public abstract class AbstractValidateCodeProcessor<C> implements ValidateCodePr
      */
     @Autowired
     private Map<String, ValidateCodeGenerator> validateCodeGeneratorMap;
-
     @Override
     public void create(ServletWebRequest request) throws Exception {
         C validateCode = generate(request);
