@@ -1,0 +1,21 @@
+server:
+  port: 9991
+spring:
+  datasource:
+    username: root
+    password: VisT2iiLc
+    url: jdbc:mysql://47.98.186.6:3306/spring_security_jwt?useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      #  更新或者创建数据表结构
+      ddl-auto: update
+    show-sql: true
+#  jackson:
+#    serialization: true
+#logging:
+#  level: info
+
+
+
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="true" />
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../../../base/gradle/gradle-6.6-milestone-1" />
+        <option name="gradleJvm" value="13" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/codesheep-client1" />
+            <option value="$PROJECT_DIR$/codesheep-client2" />
+            <option value="$PROJECT_DIR$/codesheep-server" />
+            <option value="$PROJECT_DIR$/module_eureka" />
+            <option value="$PROJECT_DIR$/serice-feign" />
+            <option value="$PROJECT_DIR$/service-ribbon" />
+            <option value="$PROJECT_DIR$/service-zuul" />
+          </set>
+        </option>
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

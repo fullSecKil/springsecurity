@@ -1,0 +1,8 @@
+rootProject.name = 'springbt_sso_jwt'
+include('module_eureka')
+include('codesheep-server')
+include('codesheep-client1')
+include('codesheep-client2')
+include('service-ribbon')
+include('serice-feign')
+include('service-zuul')
